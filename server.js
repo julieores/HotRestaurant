@@ -53,8 +53,8 @@ app.post("/api/tables", function (req, res) {
 
   console.log(newReservation);
 
-  if (tableReservations.length <= tables) {
-
+  if (tableReservations.length < tables) {
+    console.log(tableReservations.length);
     tableReservations.push(newReservation);
 
     res.json(true);
